@@ -1,4 +1,4 @@
-#**Task 1: Add more methods to PythonList, SortedList, and Unsorted List**
+## **Task 1: Add more methods to PythonList, SortedList, and Unsorted List**
 
 There are some methods which should be added to the classes we have done during the lecture class. All of them are listed below:
 
@@ -119,7 +119,7 @@ true
 [3, 8, 2, 10, 4, 5, 7]
 ```
 
-# **Task 2: Apply Strategy Pattern to a new problem**
+## **Task 2: Apply Strategy Pattern to a new problem**
 
 **Objective:** In this task, you will implement the strategy pattern to enhance the functionality of a simple shopping cart system. The goal is to allow the cart to apply different discount strategies to items added to it.
 
