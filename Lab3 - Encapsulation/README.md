@@ -111,7 +111,8 @@ public class DoorTest {
         d2.open("Finger of Somsak");
         d2.open("Finger of Somchai");
     }
-}```
+}
+```
 
 
 ### Expected output
