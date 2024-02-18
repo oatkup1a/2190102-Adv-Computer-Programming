@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+    <title>Interactive To-Do List</title>
+    <style>
+        /* Provided CSS styling */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            margin-bottom: 8px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+        }
+    </style>
+</head>
+<body>
+    <!-- Provided HTML structure -->
+    <h1>Interactive To-Do List</h1>
+
+    <form>
+        <label for="taskInput">New Task:</label>
+        <input type="text" id="taskInput" placeholder="Enter task" required="">
+        <button type="button" onclick="addTask()">Add Task</button>
+    </form>
+
+    <ul id="taskList">
+        <!-- Tasks will be added dynamically here -->
+
+    <script>
+      // Enter your script here
+        function addTask() {
+            var taskInput = document.getElementById('taskInput');
+            var taskList = document.getElementById('taskList');
+
+            if (taskInput.value.trim() !== '') {
+                
+                var listItem = document.createElement('li');
+
+                listItem.textContent = taskInput.value;
+
+                listItem.addEventListener('click', function() {
+                    editTask(listItem);
+                });
+            
+                taskList.appendChild(listItem);
+
+                taskInput.value = '';
+
+            }
+        }
+
+    function editTask(listItem) {
+        var newText = prompt('Enter the new text:', listItem.textContent);
+    
+        if (newText.trim() !== '' || newText !== null) {
+            listItem.textContent = newText;
+        } else {
+            listItem.remove();
+        }
+    }
+
+    
+    </script>
+
+</body></html>

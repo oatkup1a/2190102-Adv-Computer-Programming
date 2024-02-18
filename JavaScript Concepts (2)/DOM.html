@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<header>
+    <title>DOM</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</header>
+<body>
+    <h1>DOM</h1>
+    <p id="first-paragraph">This is a paragraph.</p>
+    <label for="userInput">Name</label>
+    <input type="text" id="userInput" placeholder="Type your name">
+    <button id="greeting" onclick="greeting()">Ok</button>
+    <p id="output-paragraph"></p>
+    <ul>
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+    </ul>
+    <ul id="output-list"></ul>
+    <script>
+        const greetingArrow = (s) => "Hello, " + s;
+        function greeting() {
+            var name = document.getElementById("userInput").value;
+            var paragraph = document.getElementById("output-paragraph");
+            paragraph.textContent = greetingArrow(name);
+            setTimeout(() => paragraph.textContent = "", 3000);
+        }
+        var fruits = ['Apple','Banana','Orange','Grape'];
+        fruits.forEach(function(fruit) {
+            var li = document.createElement("li");
+            var ul = document.createElement("output-list");
+            li.appendChild(document.createElement(fruit));
+            ul.appendChild(li);
+        });
+       // document.getElementById("greeting").addEventListener("click", greeting, false);
+    </script>
+    <label for="fruitInput">Fruit Name</label>
+    <input type="text" id="fruitInput" placeholder="Type your fruit name here">
+    <button id="greeting" onclick="addFruit()">Add</button>
+    <ul id="fruit-list"></ul>
+    <script>
+        function addFruit() {
+            var fruit = document.getElementById("fruitInput").value;
+                var li = document.createElement("li");
+                var ul = document.getElementById("fruit-list");
+                li.appendChild(document.createTextNode(fruit));
+                ul.appendChild(li);
+            }
+    </script>
+</body>
+</html>
